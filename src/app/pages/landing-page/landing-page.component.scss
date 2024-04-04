@@ -1,0 +1,38 @@
+@import "../../../styles";
+
+
+.landing {
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  background: url(../../../assets/images/dnd_banner.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+  &__overlay {
+    height: calc(100% - 124px);
+    padding: 124px 0 0 64px;
+    background: linear-gradient(to right, $dd-dark-rgba 40%, transparent 60%);
+
+    &-title {
+      margin-bottom: 32px;
+    }
+
+    &-subtitle {
+      margin-bottom: 64px;
+    }
+
+    &-btns {
+      position: absolute;
+      left: 0;
+      top: 542px;
+
+      &-divider {
+        height: 64px;
+      }
+    }
+  }
+}
