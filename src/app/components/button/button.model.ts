@@ -1,16 +1,36 @@
-export interface IOptional {
-
+export enum ButtonColorsEnum {
+  ACCENT = '',
+  MEDIUM = '',
+  DARK = '',
 }
 
-export class Model {
+export enum ButtonTypesEnum {
+  LANDING = '',
+  REGULAR = '',
+}
+
+export interface IOptional {
+  color?: ButtonColorsEnum;
+  type?: ButtonTypesEnum;
+  onClick?: () => void;
+}
+
+export class ButtonModel {
+  public title: string;
   public optional: IOptional;
 
-  constructor(optional?: IOptional) {
-    this.optional = optional || {};
+  constructor(title: string, optional?: IOptional) {
+    this.title = title;
+    this.optional = {
+      color: ButtonColorsEnum.MEDIUM,
+      type: ButtonTypesEnum.REGULAR,
+      onClick: undefined,
+      ...optional,
+    };
   }
 
-  public static create(optional?: IOptional): Model {
-    return new Model(optional);
+  public static create(title: string, optional?: IOptional): ButtonModel {
+    return new ButtonModel(title, optional);
   }
 }
 

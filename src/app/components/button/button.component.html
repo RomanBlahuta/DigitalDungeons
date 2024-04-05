@@ -1,4 +1,4 @@
-<div class="btn" (click)="onClick()">
-  <div class="btn__base">Start</div>
-  <div class="btn__triangle"></div>
+<div class="btn" (click)="onClick()" (mouseenter)="setHover(true)" (mouseleave)="setHover(false)">
+  <div [class]="isHover ? 'btn__base-hover' : 'btn__base'" [@buttonHoverAnimation]="hoverAnimationState">{{ model.title }}</div>
+  <div [class]="isHover ? 'btn__triangle-hover' : 'btn__triangle'"></div>
 </div>
