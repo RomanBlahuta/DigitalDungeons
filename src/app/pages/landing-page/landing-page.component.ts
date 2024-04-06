@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ButtonColorsEnum, ButtonModel, ButtonTypesEnum} from "../../components/button/button.model";
 import {Store} from "@ngrx/store";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'dd-landing-page',
@@ -11,7 +12,7 @@ export class LandingPageComponent implements OnInit {
   public startButtonModel: ButtonModel;
   public aboutButtonModel: ButtonModel;
 
-  constructor(private store$: Store) {
+  constructor(private store$: Store, private router: Router) {
   }
 
   public ngOnInit(): void {
@@ -29,7 +30,7 @@ export class LandingPageComponent implements OnInit {
   }
 
   public onStartButtonClick(): void {
-    console.log('START');
+    this.router.navigate(['/home']);
   }
 
   public onAboutButtonClick(): void {

@@ -6,7 +6,8 @@ const routes: Routes = [{
     redirectTo: 'landing',
     pathMatch: 'full',
   },
-  { path: 'landing', loadChildren: () => import('./pages/landing-page/landing-page.module').then(m => m.LandingPageModule) }];
+  { path: 'landing', loadChildren: () => import('./pages/landing-page/landing-page.module').then(m => m.LandingPageModule) },
+  { path: 'home', loadChildren: () => import('./pages/home-page/home-page.module').then(m => m.HomePageModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

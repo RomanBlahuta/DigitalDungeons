@@ -1,0 +1,82 @@
+@import "../../../styles";
+
+.home {
+  display: flex;
+  background-color: $dd-medium;
+  flex-direction: column;
+  height: 100vh;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    height: calc(100% - $dd-header-height);
+
+    &-side-panel {
+      width: 50%;
+      height: 100%;
+      background-color: $dd-light;
+      box-shadow: 4px 6px 10px 4px $dd-box-shadow;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+
+      &-title {
+        margin: 32px;
+      }
+
+      &-divider {
+        height: 6px;
+        background-color: $dd-medium;
+        width: 100%;
+      }
+
+      &-empty-list-view {
+        width: 100%;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-message {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          &-icon {
+            width: 230px;
+            color: $dd-dark;
+          }
+
+          &-text {
+            margin-top: 32px;
+          }
+        }
+      }
+    }
+
+    &-categories {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      align-items: center;
+
+      &-wrapper {
+        width: 624px;
+        height: 620px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      &-item {
+        display: inline-block;
+        width: 280px;
+        height: 280px;
+        margin: 16px;
+      }
+    }
+  }
+}

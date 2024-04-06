@@ -1,33 +1,49 @@
+@import "variables";
+
 .medula-one-regular {
   font-family: "Medula One", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
+.font-home-page {
+  @extend .medula-one-regular;
+  font-size: 36px;
+  color: $dd-dark;
+  //-webkit-text-stroke: 1px black;
+}
+
 .font-header {
   @extend .medula-one-regular;
   font-size: 72px;
-  color: white;
+  color: $dd-white;
   -webkit-text-stroke: 1px black;
 }
 
 .font-landing-title {
   @extend .medula-one-regular;
   font-size: 120px;
-  color: white;
+  color: $dd-white;
   -webkit-text-stroke: 1px black;
 }
 
 .font-landing-subtitle {
   @extend .medula-one-regular;
   font-size: 48px;
-  color: white;
+  color: $dd-white;
   -webkit-text-stroke: 1px black;
 }
 
 .font-btn-large {
   @extend .medula-one-regular;
   font-size: 64px;
-  color: white;
+  color: $dd-white;
   -webkit-text-stroke: 1px black;
+}
+
+.font-side-panel-title {
+  @extend .medula-one-regular;
+  font-size: 66px;
+  color: $dd-dark;
+  //-webkit-text-stroke: 1px black;
 }

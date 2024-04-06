@@ -1,0 +1,16 @@
+@import "../../../styles";
+
+.category-btn {
+  width: 280px;
+  height: 280px !important;
+  display: inline-block;
+  background-color: $dd-dark;
+  border-radius: 16px;
+  box-shadow: 2px 6px 10px 4px $dd-box-shadow;
+
+  &:hover {
+    //position: relative;
+    //top: -10px;
+    cursor: pointer;
+  }
+}
